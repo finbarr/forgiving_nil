@@ -1,11 +1,8 @@
 ```ruby
-nil.forgive {
-  some_obj.big.long.chain.of.methods.that.might.break
-}
-```
-
-Instead of
-----------
-```ruby
-if some_obj && some_obj.respond_to? :big && some_obj.big.respond_to? :long # bla bla bla
+some_obj.big.long.chain.of.methods.that.breaks.because.of.a.nil
+# => Exception, nil or the result of the last method call
+!some_obj.big.nil? && !some_obj.big.long.nil? && !some_obj.big.long.chain.nil? && !some_obj.big.long.chain.of.nil? #.....................
+# => lame
+nil.forgive { some_obj.big.long.chain.of.methods.that.breaks.because.of.a.nil }
+# => nil, or the result of the last method call
 ```

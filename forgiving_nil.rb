@@ -5,8 +5,10 @@ class NilClass
     super
   end
   def forgive
+    return unless block_given?
     @forgiving = true
-    yield if block_given?
+    result = yield
     @forgiving = false
+    result
   end
 end
