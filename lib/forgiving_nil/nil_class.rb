@@ -5,7 +5,7 @@ class NilClass
     super
   end
   def forgive
-    return unless block_given?
+    return super unless block_given?
     @forgiving = true
     result = yield
     @forgiving = false
