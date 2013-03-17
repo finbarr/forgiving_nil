@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "forgiving_nil"
   s.version     = ForgivingNil::VERSION
   s.authors     = ["Finbarr Taylor"]
-  s.email       = ["finbarrtaylor@gmail.com"]
+  s.email       = [""]
   s.homepage    = ""
   s.summary     = %q{You can simply ask nil to forgive you: nil.forgive{real_object.might_be_nil.dont.care} #=> nil or the value of care}
   s.description = %q{Forgiving Nil lets you forget about nil exceptions conveniently and temporarily when required}
